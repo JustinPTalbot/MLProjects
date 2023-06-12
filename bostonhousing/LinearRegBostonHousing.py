@@ -77,6 +77,8 @@ pickle.dump(regression,open('regmodel.pkl','wb'))
 pickled_model = pickle.load(open('regmodel.pkl','rb'))
 pickled_model.predict(scaler.transform(boston_df.values[0,:-1].reshape(1,-1)))
 
+# Pickling the scaler for deployment
+pickle.dump(scaler,open('scaling.pkl','wb'))
 
 
 
